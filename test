@@ -1,0 +1,39 @@
+
+	$ git checkout -b newV5 -t origin/master
+Branch newV5 set up to track remote branch master from origin.
+Switched to a new branch 'newV5'
+$ mkdir test_folder
+$ touch test_folder/test.php
+$ git add test_folder
+$ git commit -m "adding test"
+[newV5 d036002] adding test
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 test_folder/test.php
+	$  git push -u origin HEAD
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 307 bytes | 0 bytes/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/chay24/devops.git
+ * [new branch]      HEAD -> newV5
+Branch newV5 set up to track remote branch newV5 from origin.
+$ git checkout master
+Switched to branch 'master'
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+$ git push -u origin HEAD
+To https://github.com/chay24/devops.git
+   bfa3aa5..d1d982d  HEAD -> master
+Branch master set up to track remote branch master from origin.
+$ git checkout master
+Already on 'master'
+Your branch is up-to-date with 'origin/master'.
+$ git merge  newV5
+Merge made by the 'recursive' strategy.
+ test_folder/test.php | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 test_folder/test.php
+$ ls
+2.log  3.log  4.log  5.log  new  newV  newV2  newV3  newV4  test_folder  test.log
